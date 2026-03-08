@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="text-center">
+        <h2 class="mb-4">Medical Image Synthesis Result</h2>
+
+        {% if real_image_path and image_path %}
+        <div class="row justify-content-center">
+            <!-- Uploaded Image -->
+            <div class="col-md-5 mb-4">
+                <div class="card shadow-sm">
+                    <div class="card-header bg-light">
+                        <h5 class="mb-0">Uploaded Image</h5>
+                    </div>
+                    <div class="card-body p-2">
+                        <img src="{{ url_for('static', filename=real_image_path) }}"
+                             alt="Original Image"
+                             class="img-fluid rounded border"
+                             onerror="this.src='{{ url_for('static', filename='images/placeholder.jpg') }}'">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Generated Image -->
+            <div class="col-md-5 mb-4">
+                <div class="card shadow-sm">
+                    <div class="card-header bg-light">
+                        <h5 class="mb-0">Generated Image (GAN)</h5>
+                    </div>
+                    <div class="card-body p-2">
+                        <img src="{{ url_for('static', filename=image_path) }}"
+
+                             alt="Generated Image"
+                             class="img-fluid rounded border"
+                             onerror="this.src='{{ url_for('static', filename='images/placeholder.jpg') }}'">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Accuracy -->
+        <div class="mt-4">
+            <h5><strong>Prediction Accuracy:</strong> {{ accuracy }}%</h5>
+        </div>
+
+        <!-- Download & Navigation -->
+        <div class="mt-4">
+            <a href="{{ url_for('download_image', image_name=image_path.split('/')[-1]) }}"
+               class="btn btn-primary me-2">
+                <i class="fas fa-download"></i> Download Generated Image
+            </a>
+
+            <a href="{{ url_for('dashboard') }}" class="btn btn-secondary">
+                <i class="fas fa-arrow-left"></i> Go Back
+            </a>
+        </div>
+
+        {% else %}
+        <div class="alert alert-warning mt-4" role="alert">
+            No images available to display.
+        </div>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}

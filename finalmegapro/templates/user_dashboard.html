@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="d-flex justify-content-center align-items-center" >
+    <div class="upload-card p-4 shadow-lg rounded text-center" 
+         style="width: 70%; max-width: 500px;">
+        <h2 class="text-primary fw-bold">Select Image Type</h2>
+        <form method="POST" action="{{ url_for('select_image_type') }}">
+            <div class="mb-3">
+                <select name="image_type" class="form-select" required>
+                    <option value="" disabled selected>Select Type</option>
+                    <option value="0">X-ray</option>
+                    <option value="1">MRI</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Next</button>
+        </form>
+    </div>
+</div>
+{% endblock %}

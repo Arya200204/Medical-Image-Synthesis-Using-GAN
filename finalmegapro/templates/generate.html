@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Medical Image Generator</title>
+</head>
+<body>
+    <h2>Select Modality and Label</h2>
+    <form method="POST" action="{{ url_for('generate') }}" enctype="multipart/form-data">
+        <label for="modality">Modality:</label>
+        <select name="modality" required>
+            <option value="">--Select--</option>
+            <option value="MRI">MRI</option>
+            <option value="X-ray">X-ray</option>
+        </select>
+        <br><br>
+
+        <label for="label">Label:</label>
+        <select name="label" required>
+            <option value="yes">Yes (Abnormal)</option>
+            <option value="no">No (Normal)</option>
+            <option value="pneumonia">Pneumonia (X-ray)</option>
+            <option value="normal">Normal (X-ray)</option>
+        </select>
+        <br><br>
+
+        <label for="image">Upload Reference Image (optional):</label>
+        <input type="file" name="image" accept="image/*">
+        <br><br>
+
+        <button type="submit">Generate</button>
+    </form>
+</body>
+</html>

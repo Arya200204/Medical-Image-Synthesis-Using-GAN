@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="d-flex justify-content-center align-items-center">
+    <div class="upload-card">
+        <h2>Upload a Medical Image</h2>
+
+        <form method="POST" action="{{ url_for('upload') }}" enctype="multipart/form-data">
+            <!-- File input -->
+            <div class="mb-3">
+                <input type="file" id="fileInput" name="image" accept="image/*" onchange="previewImage()" required>
+            </div>
+
+            <!-- Preview -->
+            <div class="text-center mb-3">
+                <img id="preview" src="#" alt="Image Preview" style="max-width: 100%; display: none;" />
+            </div>
+
+            <button type="submit" class="btn btn-primary w-100">Upload & Analyze</button>
+        </form>
+    </div>
+</div>
+
+<script>
+    function previewImage() {
+        const file = document.getElementById('fileInput').files[0];
+        const preview = document.getElementById('preview');
+
+        if (file) {
+            const reader = new FileReader();
+            reader.onload = function (e) {
+                preview.src = e.target.result;
+                preview.style.display = 'block';
+            };
+            reader.readAsDataURL(file);
+        } else {
+            preview.src = '#';
+            preview.style.display = 'none';
+        }
+    }
+</script>
+{% endblock %}

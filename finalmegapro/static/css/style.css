@@ -1,0 +1,596 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Pacifico&display=swap');
+
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #0093C5, #0096C7,#00A5D0, #00B4D8, #17BBDC, #2CC1DF, #CAF0F8);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    padding-top: 60px;
+    color: #333;
+}
+
+/* Animated Background */
+@keyframes gradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+
+
+/* Navbar Styling */
+.navbar {
+    background: linear-gradient(to right, #015ba0, #0169ab, #0077B6, #007FBB, #0083BD, #0087bf, #0096c7, #00B4D8);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Navbar Brand */
+.navbar-brand {
+    font-family: 'Pacifico', cursive;
+    font-size: 28px;
+    font-weight: bold;
+    color: #fdfdfd !important;
+    transition: transform 0.2s ease-in-out, color 0.3s ease-in-out;
+}
+
+.navbar-brand:hover {
+    transform: scale(1.08);
+    color: #caf0f8 !important;
+}
+
+/* Navbar Links */
+.navbar-nav .nav-link {
+    color: #ffffff !important;
+    font-weight: 500;
+    transition: color 0.3s ease-in-out;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #caf0f8 !important;
+}
+
+/* Navbar Toggler */
+.navbar-toggler {
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+.navbar-toggler-icon {
+    background-color: #ffffff;
+}
+
+/* Hero Section */
+.hero-section {
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.hero-section h1 {
+    font-size: 48px;
+    font-weight: 700;
+    color: #01579b;
+    margin-bottom: 10px;
+}
+
+.hero-section p {
+    font-size: 20px;
+    color: #333;
+    max-width: 600px;
+    margin-bottom: 20px;
+}
+
+.hero-section .btn-primary {
+    font-size: 18px;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.hero-section .btn-primary:hover {
+    background-color: #013a63;
+    transform: scale(1.05);
+}
+
+/* About Section */
+.about-section {
+    background: #f8f9fa;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.about-section h2 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #0288d1;
+    margin-bottom: 15px;
+}
+
+.about-section p {
+    font-size: 18px;
+    max-width: 800px;
+    margin: auto;
+}
+
+/* Upload Form Styling */
+.upload-card, .image-card {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+    width: 550px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.upload-card h2 {
+    font-size: 22px;
+    margin-bottom: 15px;
+    color: #01579b;
+}
+
+.upload-box {
+    border: 2px dashed #ccc;
+    padding: 40px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.upload-label {
+    color: #777;
+    font-size: 16px;
+}
+
+/* Button Styling */
+.custom-button, .download-btn, .custom-link {
+    font-size: 16px;
+    color: #fff;
+    background-color: #0288d1;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 20px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.custom-button:hover, .download-btn:hover, .custom-link:hover {
+    background-color: #01579b;
+    transform: scale(1.05);
+}
+
+/* Result Page Layout */
+.result-container {
+    width: 100%;
+    max-width: 900px;
+    margin: auto;
+    padding-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Dark Mode */
+.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+.dark-mode .container {
+    background-color: #1e1e1e;
+}
+
+.dark-mode .form-control, 
+.dark-mode .form-select {
+    background-color: #2b2b2b;
+    color: white;
+    border: 1px solid #444;
+}
+
+.dark-mode .table {
+    background-color: #2b2b2b;
+    color: white;
+}
+
+.dark-mode .table-dark th {
+    background-color: #444;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 10px;
+    background: transparent;
+    color: #01579b;
+    font-size: 14px;
+    width: 100%;
+    margin-top: auto;
+    border-top: 1px solid rgba(1, 87, 155, 0.2);
+}
+
+/* User Dashboard */
+.dashboard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+    min-height: 100vh;
+    justify-content: center;
+}
+
+/* Login Page */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    text-align: center;
+}
+
+.login-card {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+    width: 400px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.login-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 12px 30px rgba(0, 0, 0, 0.3);
+}
+
+.login-card h2 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #0077B6;
+    margin-bottom: 20px;
+}
+
+/* Form Fields */
+.login-card input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.login-card input:focus {
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Buttons */
+button {
+    padding: 12px 20px;
+    width: 100%;
+    background: linear-gradient(135deg, #0096C7, #0077B6);
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+    font-size: 16px;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #0077B6, #0096C7);
+    transform: scale(1.03);
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .login-card {
+        width: 90%;
+        padding: 30px;
+    }
+}
+
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Hero Section */
+.container {
+    text-align: center;
+}
+
+h1.display-4 {
+    color: #004085;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+p.lead {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    padding: 12px 24px;
+    font-size: 1.2rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #004085;
+}
+
+/* About Section */
+.bg-light {
+    background-color: #f1f1f1 !important;
+    padding: 50px 20px;
+}
+
+h2.fw-bold {
+    color: #004085;
+    font-size: 2rem;
+}
+
+p.mt-3 {
+    font-size: 1.1rem;
+    color: #555;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    h1.display-4 {
+        font-size: 2rem;
+    }
+    
+    p.lead {
+        font-size: 1rem;
+    }
+    
+    .btn-primary {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+    
+    h2.fw-bold {
+        font-size: 1.5rem;
+    }
+}
+
+/* Centering the Registration Card */
+.register-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+}
+
+/* Registration Card */
+.register-card {
+    background: #CAF0F8; /* Solid white background */
+    border-radius: 12px;
+    padding: 30px;
+    max-width: 400px;
+    width: 100%;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+    border: 1px solid #ddd;
+}
+
+/* Title */
+.register-card h1 {
+    margin-bottom: 10px;
+    font-size: 26px;
+    color: #004085;
+}
+
+/* Subtitle */
+.register-card p {
+    font-size: 14px;
+    color: #666;
+}
+
+/* Form Input Fields */
+.register-card .form-control,
+.register-card .form-select {
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 14px;
+}
+
+
+
+/* Already have an account link */
+.register-card a {
+    font-size: 14px;
+    color: #333;
+    text-decoration: none;
+}
+
+.register-card a span {
+    color: #007bff;
+    font-weight: bold;
+}
+
+/* Center the login card */
+.d-flex {
+    height: 50vh;
+}
+
+/* Login Card */
+.login-card {
+    width: 100%;
+    max-width: 400px;
+    background: #CAF0F8;  /* Solid white background */
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+    border: 1px solid #ddd; /* Subtle border */
+}
+
+/* Heading */
+h1.text-primary {
+    font-size: 2rem;
+    color: #004085 !important;
+}
+
+/* Input Fields */
+.form-control {
+    border-radius: 5px;
+    padding: 12px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    transition: 0.3s;
+}
+
+.form-control:focus {
+    border-color: #007bff;
+    box-shadow: 0px 0px 8px rgba(0, 123, 255, 0.3);
+}
+
+
+/* Register Link */
+.text-decoration-none {
+    font-size: 0.9rem;
+    color: #333;
+    transition: color 0.3s;
+}
+
+.text-decoration-none:hover {
+    color: #007bff;
+}
+
+/* Center the dashboard container */
+.d-flex {
+    height: 80vh;
+}
+
+/* Upload Card */
+.upload-card {
+    width: 100%;
+    max-width: 400px;
+    background: #CAF0F8; /* Solid white background */
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    border: 1px solid #ddd; /* Light border */
+}
+
+/* Heading */
+h2.text-primary {
+    font-size: 1.5rem;
+    color: #004085 !important;
+}
+
+/* Dropdown */
+.form-select {
+    border-radius: 5px;
+    /* padding: 12px; */
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    transition: 0.3s;
+}
+
+.form-select:focus {
+    border-color: #007bff;
+    box-shadow: 0px 0px 8px rgba(0, 123, 255, 0.3);
+}
+
+
+.dashboard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+    color: #CAF0F8;
+}
+
+/* Centering the Upload Card */
+.dashboard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Upload Card */
+.upload-card {
+    background: #CAF0F8; /* Solid white background */
+    border-radius: 15px;
+    padding: 40px;
+    max-width: 500px;
+    width: 100%;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+    border: 1px solid #ddd;
+}
+
+/* Title */
+.upload-card h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #004085;
+}
+
+/* Upload Box */
+.upload-box {
+    border: 2px dashed #004085;
+    border-radius: 10px;
+    padding: 30px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    background-color: #f8f9fa;
+}
+
+.upload-box:hover {
+    background-color: #e9ecef;
+}
+
+/* Hide File Input */
+.upload-box input[type="file"] {
+    display: none;
+}
+
+/* File Input Label */
+.upload-box label {
+    display: block;
+    font-size: 14px;
+    color: #333;
+    font-weight: 500;
+}
+
+
