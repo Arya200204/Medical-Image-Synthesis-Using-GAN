@@ -44,4 +44,12 @@ The primary goal of the project is to demonstrate how Generative AI can be used 
 * Frontend: HTML, CSS, Jinja2 Templates
 
 # System Requirements
-## Hardware Requirements
+### Hardware Requirements
+* Processor: Intel i5 or higher
+* RAM: Minimum 8GB recommended
+* Storage: At least 5GB free disk space
+
+### Software Requirements
+* Python 3.8+
+* MySQL Server
+* Git
