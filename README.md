@@ -35,3 +35,13 @@ The primary goal of the project is to demonstrate how Generative AI can be used 
 7. Result Display
    * Both the original and generated images are displayed to the user.
    * Generated images can be downloaded.
+
+# Tech Stack
+* Programming Language: Python
+* Web Framework: Flask
+* Machine Learning Libraries: TensorFlow, Keras, NumPy, OpenCV, PIL (Python Imaging Library)
+* Database: MySQL
+* Frontend: HTML, CSS, Jinja2 Templates
+
+# System Requirements
+## Hardware Requirements
