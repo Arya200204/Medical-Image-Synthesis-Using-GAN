@@ -38,5 +38,5 @@ The primary goal of the project is to demonstrate how Generative AI can be used 
 
 6. Result Display
 
-*Both the original and generated images are displayed to the user.
+* Both the original and generated images are displayed to the user.
 * Generated images can be downloaded.
