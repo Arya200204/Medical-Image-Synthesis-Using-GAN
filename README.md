@@ -6,3 +6,8 @@ The application is built using Flask for the backend, MySQL for database managem
 The primary goal of the project is to demonstrate how Generative AI can be used for medical image augmentation, which can support research, training datasets, and medical imaging studies.
 
 # Objectives
+* To generate synthetic medical images using Conditional GAN architecture.
+* To provide a web-based interface for uploading and generating images.
+* To manage users using role-based authentication.
+* To store uploaded and generated images in a structured database system.
+* To demonstrate the application of Generative AI in healthcare imaging.
