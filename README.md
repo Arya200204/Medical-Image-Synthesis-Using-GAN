@@ -14,29 +14,24 @@ The primary goal of the project is to demonstrate how Generative AI can be used 
 
 # Methodology
 1. Data Preprocessing
+   * Medical images are resized and normalized.
+   * Data augmentation techniques are applied to increase dataset diversity.
 
-* Medical images are resized and normalized.
-* Data augmentation techniques are applied to increase dataset diversity.
-
-2. Model Training
-
-* A Conditional GAN (CGAN) model is trained using labeled medical images.
-* The generator produces synthetic images using random noise and class labels.
-* The discriminator evaluates whether images are real or generated.
+3. Model Training
+   * A Conditional GAN (CGAN) model is trained using labeled medical images.
+   * The generator produces synthetic images using random noise and class labels.
+   * The discriminator evaluates whether images are real or generated.
 
 3. Model Integration
+   * The trained generator model is saved and loaded into the Flask application.
 
-* The trained generator model is saved and loaded into the Flask application.
-
-4. Image Upload & Processing
-* Users upload medical images through the web interface.
-* Images are preprocessed before being passed to the GAN generator.
+5. Image Upload & Processing
+   * Users upload medical images through the web interface.
+   * Images are preprocessed before being passed to the GAN generator.
 
 5. Image Generation
+   * The model generates synthetic medical images based on the selected image type.
 
-* The model generates synthetic medical images based on the selected image type.
-
-6. Result Display
-
-* Both the original and generated images are displayed to the user.
-* Generated images can be downloaded.
+7. Result Display
+   * Both the original and generated images are displayed to the user.
+   * Generated images can be downloaded.
